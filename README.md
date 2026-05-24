@@ -2,121 +2,160 @@
 
 ![EMAD CYBER Banner](banner.png)
 
-# 🔍 EMAD CYBER — TikTok Info Tool
+# ⚡ EMAD CYBER — TikTok OSINT Tool `v2.0`
 
-**أداة OSINT لاستخراج معلومات حسابات تيك توك**
+### 🕶️  Cyberpunk-flavored recon tool for TikTok intelligence gathering
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
-![Platform](https://img.shields.io/badge/Platform-TikTok-black?style=for-the-badge&logo=tiktok)
-![Author](https://img.shields.io/badge/Author-@e4__19-cyan?style=for-the-badge)
-![License](https://img.shields.io/badge/License-Educational-red?style=for-the-badge)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
+[![Platform](https://img.shields.io/badge/Platform-TikTok-black?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com)
+[![TikTok](https://img.shields.io/badge/TikTok-@49mu-FF0050?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@49mu)
+[![GitHub](https://img.shields.io/badge/GitHub-@e419x-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/e419x)
+[![License](https://img.shields.io/badge/License-Educational-red?style=for-the-badge)](#)
+[![Version](https://img.shields.io/badge/Version-2.0-00ffd5?style=for-the-badge)](#)
 
 </div>
 
 ---
 
-## 📌 وصف الأداة
+## ✨ ما الجديد في الإصدار 2.0
 
-**EMAD CYBER** هي أداة مكتوبة بلغة Python تتيح استخراج المعلومات العامة لأي حساب تيك توك عن طريق اسم المستخدم فقط.
+> تحديث شامل للواجهة بطابع هاكر سايبربانك 🟢🟣🩷
+
+- 🎨 **واجهة سايبربانك متكاملة** — ألوان نيون (سيان / بنفسجي / وردي / أخضر) متدرّجة
+- 🌧️ **Matrix Rain** عند البدء — مؤثر شاشة شبيه بالأفلام
+- 📊 **صناديق ASCII أنيقة** لعرض النتائج (Profile Intel + Social Metrics + Bio)
+- ⚙️ **شريط تقدّم وspinner** أثناء الجلب
+- 🔢 **تنسيق الأرقام** مع فواصل (مثال: `162,300,000`)
+- ✔️ **عرض حالة التحقق** (Verified ✓)
+- 🛡️ **معالجة أخطاء أفضل** + Timeout للطلبات
+- 🖼️ **اكتشاف رابط الـ Avatar** تلقائيًا
+- 📐 **استجابة لحجم الطرفية** (Banner كبير / مصغّر تلقائيًا)
 
 ---
 
-## ✨ المعلومات التي تستخرجها الأداة
+## 🎯 المعلومات التي تستخرجها الأداة
 
-| المعلومة | الوصف |
-|----------|--------|
-| 👤 **Username** | اسم المستخدم |
-| 🔑 **SecUID** | المعرف الأمني للحساب |
-| 📛 **Name** | الاسم الكامل |
-| 👥 **Followers** | عدد المتابعين |
-| 📲 **Following** | عدد المتابَعين |
-| ❤️ **Likes** | عدد الإعجابات |
-| 🎬 **Videos** | عدد الفيديوهات |
-| 🔒 **Private** | هل الحساب خاص؟ |
-| 🌍 **Country** | الدولة |
-| 📅 **Created Date** | تاريخ إنشاء الحساب |
-| 🆔 **User ID** | المعرف الفريد |
-| 📝 **Bio** | السيرة الذاتية |
+| # | المعلومة | الوصف |
+|---|----------|--------|
+| 1 | 👤 **Username** | اسم المستخدم |
+| 2 | 🏷️ **Nickname** | الاسم الظاهر |
+| 3 | 🆔 **User ID** | المعرّف الفريد |
+| 4 | 🔑 **SecUID** | المعرّف الأمني |
+| 5 | 📅 **Created Date** | تاريخ إنشاء الحساب (يُحسب من الـ ID) |
+| 6 | 🌍 **Region** | الدولة + علم البلد |
+| 7 | 🔒 **Private** | هل الحساب خاص؟ |
+| 8 | ✔️ **Verified** | حالة التوثيق |
+| 9 | 👥 **Followers** | عدد المتابعين |
+| 10 | 📲 **Following** | عدد المتابَعين |
+| 11 | 🤝 **Friends** | عدد الأصدقاء |
+| 12 | ❤️ **Likes** | إجمالي الإعجابات |
+| 13 | 🎬 **Videos** | عدد الفيديوهات |
+| 14 | 📝 **Bio** | السيرة الذاتية |
+| 15 | 🖼️ **Avatar URL** | رابط صورة الحساب |
+| 16 | 🔗 **Profile URL** | رابط الحساب |
 
 ---
 
 ## ⚙️ المتطلبات
 
-- Python 3.x
-- اتصال بالإنترنت
+- 🐍 Python `3.8+`
+- 🌐 اتصال بالإنترنت
+- 💻 طرفيّة تدعم ألوان ANSI (Linux / macOS / WSL / Termux / Windows Terminal)
 
 ---
 
-## 📦 التثبيت
+## 📦 التثبيت والتشغيل
 
 ```bash
-# 1. 
+# 1️⃣ استنساخ المستودع
 git clone https://github.com/e419x/emad-cyber-tiktok.git
-cd imadtik
+cd emad-cyber-tiktok
 
-# 2. تثبيت المكتبات المطلوبة
+# 2️⃣ تثبيت المكتبات
 pip install -r requirements.txt
 
-# 3. تشغيل الأداة
+# 3️⃣ تشغيل الأداة
+python3 imadtik.py
+```
+
+### 📱 على Termux (Android)
+
+```bash
+pkg update && pkg upgrade -y
+pkg install python git -y
+git clone https://github.com/e419x/emad-cyber-tiktok.git
+cd emad-cyber-tiktok
+pip install -r requirements.txt
 python imadtik.py
 ```
 
 ---
 
-##  طريقة الاستخدام
+## 🚀 طريقة الاستخدام
 
-```
-Enter TikTok Username: username_here
-```
-
-### مثال على النتيجة:
-
-```
-[+] ACCOUNT INFORMATION
-───────────────────────────────────────────────────────
-Username     : example_user
-SecUID       : MS4wLjABAAAA...
-Name         : Example Name
-Followers    : 10000
-Following    : 500
-Likes        : 250000
-Videos       : 120
-Private      : false
-Country      : Saudi Arabia 🇸🇦
-Created Date : 2020-03-15 12:30:00
-User ID      : 123456789
-───────────────────────────────────────────────────────
-Bio: This is the bio text
+```text
+┌──(49mu㉿emad-cyber)
+└─▶ Enter TikTok username: tiktok
 ```
 
----
+### 🖼️ مثال على المخرجات
 
-##  هيكل المشروع
+```text
+╔═══ ⚡ PROFILE INTEL ═════════════════════════════════════════╗
+║  ▸ USERNAME      │ @tiktok                                  ║
+║  ▸ NICKNAME      │ TikTok                                   ║
+║  ▸ USER ID       │ 107955                                   ║
+║  ▸ REGION        │ United States 🇺🇸                         ║
+║  ▸ STATUS        │ ✔ Verified                               ║
+╚══════════════════════════════════════════════════════════════╝
 
-```
-imadtik/
-├── imadtik.py          # الأداة الرئيسية
-├── requirements.txt    # المكتبات المطلوبة
-├── banner.png          # صورة الأداة
-└── README.md           # هذا الملف
+╔═══ 📊 SOCIAL METRICS ════════════════════════════════════════╗
+║  ▸ FOLLOWERS     │ 82,900,000                               ║
+║  ▸ FOLLOWING     │ 1,542                                    ║
+║  ▸ TOTAL LIKES   │ 672,400,000                              ║
+║  ▸ VIDEOS        │ 1,893                                    ║
+╚══════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-##  إخلاء المسؤولية
+## 🗂️ هيكل المشروع
 
-> هذه الأداة مخصصة **للأغراض التعليمية والبحثية فقط**.
-> لا تتحمل المسؤولية عن أي استخدام غير قانوني أو غير أخلاقي لهذه الأداة.
+```text
+emad-cyber-tiktok/
+├── 📜 imadtik.py          ← الأداة الرئيسية (v2.0)
+├── 📋 requirements.txt    ← المكتبات
+├── 🖼️  banner.png          ← شعار المستودع
+└── 📖 README.md           ← هذا الملف
+```
+
+---
+
+## 🧠 كيف تعمل؟
+
+تقوم الأداة بإرسال طلب HTTP GET إلى صفحة الحساب على TikTok مع هيدرز محاكية لمتصفح أندرويد، ثم تستخرج بيانات `webapp.user-detail` من JSON المضمَّن في HTML. تاريخ الإنشاء يُحسب رياضيًا من أول 31 بت من الـ User ID (timestamp ضمني).
+
+---
+
+## ⚠️ إخلاء المسؤولية
+
+> 🛑 هذه الأداة لأغراض **تعليمية وبحثية بحتة** (OSINT / Open-Source Intelligence).
+> لا يتحمّل المطوّر أي مسؤولية عن أي استخدام غير قانوني أو غير أخلاقي.
 > يُرجى الالتزام بـ [شروط خدمة TikTok](https://www.tiktok.com/legal/terms-of-service) و[سياسة GitHub للاستخدام المقبول](https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies).
 
 ---
 
-## 👨‍💻 المطور
+## 👨‍💻 المطوّر
 
 <div align="center">
 
-**EMAD CYBER**
+### ⚡ EMAD CYBER ⚡
 
-Made with ❤️ by [@e419x](https://github.com/e419x)
+**Made with 💚 & ☕ by [@e419x](https://github.com/e419x)**
+
+🎵 TikTok :: [`@49mu`](https://www.tiktok.com/@49mu)
+🐙 GitHub :: [`e419x`](https://github.com/e419x)
+
+⭐ **أعجبتك الأداة؟ لا تنسَ النجمة على GitHub!**
 
 </div>
